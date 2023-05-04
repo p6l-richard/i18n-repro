@@ -16,7 +16,7 @@ const config = {
         http: true,
       },
     ],
-    localeDetection: false,
+    localeDetection: true,
   },
   localePath: path.resolve("./public/static/locales"),
   defaultNS: "website",
