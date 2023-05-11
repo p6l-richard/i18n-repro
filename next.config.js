@@ -1,3 +1,5 @@
+const { NextResponse } = require('next/server');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -18,6 +20,11 @@ const nextConfig = {
     ],
     localeDetection: true,
   },
+  async middleware(req, event) {
+    console.log("middleware.ts running");
+    console.log(req.nextUrl.domainLocale)
+    return NextResponse.next();
+  }
 }
 
 module.exports = nextConfig
