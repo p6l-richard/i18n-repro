@@ -11,7 +11,6 @@ specifiers:
   eslint-config-next: 13.4.1
   i18next: ^22.4.15
   next: v13.4.2-canary.5
-  next-i18next: ^13.2.2
   postcss: 8.4.23
   react: 18.2.0
   react-dom: 18.2.0
@@ -28,7 +27,6 @@ dependencies:
   eslint-config-next: 13.4.1_iacogk7kkaymxepzhgcbytyi7q
   i18next: 22.4.15
   next: 13.4.2-canary.5_biqbaboplfbrettd7655fr4n2y
-  next-i18next: 13.2.2_yjcxzotxwldh2tf3ovl5fwptmi
   postcss: 8.4.23
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -290,13 +288,6 @@ packages:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
     dependencies:
       tslib: 2.5.0
-    dev: false
-
-  /@types/hoist-non-react-statics/3.3.1:
-    resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
-    dependencies:
-      '@types/react': 18.2.0
-      hoist-non-react-statics: 3.3.2
     dev: false
 
   /@types/json5/0.0.29:
@@ -676,11 +667,6 @@ packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
-    dev: false
-
-  /core-js/3.30.1:
-    resolution: {integrity: sha512-ZNS5nbiSwDTq4hFosEDqm65izl2CWmLz0hARJMyNQBgkUZMIF51cQiMvIQKA6hvuaeWxQDP3hEedM1JZIgTldQ==}
-    requiresBuild: true
     dev: false
 
   /cross-spawn/7.0.3:
@@ -1510,12 +1496,6 @@ packages:
       function-bind: 1.1.1
     dev: false
 
-  /hoist-non-react-statics/3.3.2:
-    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
-    dependencies:
-      react-is: 16.13.1
-    dev: false
-
   /html-parse-stringify/3.0.1:
     resolution: {integrity: sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==}
     dependencies:
@@ -1530,10 +1510,6 @@ packages:
   /human-signals/4.3.1:
     resolution: {integrity: sha512-nZXjEF2nbo7lIw3mgYjItAfgQXog3OjJogSbKa2CQIIvSGWcKgeJnQlNXip6NglNzYH45nSRiEVimMvYL8DDqQ==}
     engines: {node: '>=14.18.0'}
-    dev: false
-
-  /i18next-fs-backend/2.1.1:
-    resolution: {integrity: sha512-FTnj+UmNgT3YRml5ruRv0jMZDG7odOL/OP5PF5mOqvXud2vHrPOOs68Zdk6iqzL47cnnM0ZVkK2BAvpFeDJToA==}
     dev: false
 
   /i18next/22.4.15:
@@ -1943,26 +1919,6 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
-    dev: false
-
-  /next-i18next/13.2.2_yjcxzotxwldh2tf3ovl5fwptmi:
-    resolution: {integrity: sha512-t0WU6K+HJoq2nVQ0n6OiiEZja9GyMqtDSU74FmOafgk4ljns+iZ18bsNJiI8rOUXfFfkW96ea1N7D5kbMyT+PA==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      i18next: ^22.0.6
-      next: '>= 12.0.0'
-      react: '>= 17.0.2'
-      react-i18next: ^12.2.0
-    dependencies:
-      '@babel/runtime': 7.21.5
-      '@types/hoist-non-react-statics': 3.3.1
-      core-js: 3.30.1
-      hoist-non-react-statics: 3.3.2
-      i18next: 22.4.15
-      i18next-fs-backend: 2.1.1
-      next: 13.4.2-canary.5_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-      react-i18next: 12.2.2_qeiswpmww5mojeeisizknycqfq
     dev: false
 
   /next/13.4.2-canary.5_biqbaboplfbrettd7655fr4n2y:
