@@ -1,38 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Issue: Middleware & i18n does not work together
 
-First, run the development server:
+This is a reproduction of a Next.js issue that you can find [here](https://github.com/vercel/next.js/issues/49656).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+When having a middleware.ts file as well as the domain routing feature active, Next.js causes an infinite navigation to the same route.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### With Middleware & Domain Routing
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+See the reloading loop [here](https://share.cleanshot.com/czjB0nLr).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+#### With Domain Routing only
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+No reloading loop, see [here](https://share.cleanshot.com/dfTSP5g9).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### With Middleware only
 
-## Learn More
+No reloading loop, see [here](https://share.cleanshot.com/SbqbYmS7).
 
-To learn more about Next.js, take a look at the following resources:
+## To reproduce
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Enable local subdomain**. Update `/etc/hosts` file with `echo "127.0.0.1 de.localhost" | sudo tee -a /etc/hosts` (macOS & Linux)
+2. **Install dependencies**. `pnpm i`
+3. **Run the project**. `pnpm dev`
+4. Open <http://localhost:3001>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This will now end up in the loop of navigating to the same domain.
